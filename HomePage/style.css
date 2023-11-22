@@ -10,9 +10,10 @@ body{
 }
 
 .plus{
-    background-color: whitesmoke;
-    color: black;
+    /* background-color: whitesmoke; */
+    color: white;
     border: none;
+    background-color:black;
     font-size:xx-large;
 }
 .box{
@@ -137,7 +138,7 @@ body{
 .read2{
     width: 80px;
     height: 30px;
-    background-color: rgb(216, 174, 181);
+    background-color: pink;
     color: rgb(176, 25, 50);
     font-size:large;
     border-radius: 5px;
