@@ -1,65 +1,48 @@
-body{
-    background-color: whitesmoke;
+.form-cover{
+    position: absolute;
+    height: 100%;
+    width: 99%;
+    padding: 0;
+    margin: 0;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    visibility: hidden;
 }
 
-.container{
+form{
+    width: 50%;
+    margin: 50px auto;
+    border: 2px solid black;
+    padding: 50px;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     gap: 30px;
+    background-color: #221f1f;
+    border-radius: 10px;
+    /* visibility: hidden; */
 }
 
-
-.url{
-    border: 1px solid black;
-    width: 80%;
-    height: 45px;
+input{
+    padding: 10px 12px;
+    height: 40px;
+    border-radius: 8px;
+    outline: none;
+    font-size: 20px;
+    background-color: #f5f5f5;
 }
 
-.title{
-    border: 1px solid black;
-    width: 80%;
-    height: 45px;
+textarea{
+    padding: 10px 12px;
+    border-radius: 8px;
+    outline: none;
+    font-size: 20px;
+    background-color: #f5f5f5;
 }
 
-.des
-{
-    border: 1px solid black;
-    width: 80%;
-    height: 45px;
-}
-
-.write{
-    border: 1px solid black;
-    width: 80%;
-    height: 350px;
-}
-
-.urlw{
-    margin-left: 8px;
-    margin-top: 11px;
-    font-size: large;
-    
-}
-
-.titlew{
-    margin-left: 8px;
-    margin-top: 11px;
-    font-size: large;
-    
-}
-
-.des{
-    margin-left: 8px;
-    margin-top: 11px;
-    font-size: large;
-    
-}
-
-.titlew{
-    margin-left: 8px;
-    margin-top: 11px;
-    font-size: large;
-    
+.back-arrow{
+    width: fit-content;
+    position: relative;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
 }
