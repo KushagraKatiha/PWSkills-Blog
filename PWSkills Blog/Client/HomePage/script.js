@@ -5,7 +5,7 @@ const readBtnArr = document.querySelectorAll('.read');
 
 readBtnArr.forEach(element => {
     element.addEventListener('click', () => {
-        window.location.href = '../BlogPage/blog.html'
+        window.location.href = '../BlogPage/index.html'
     });
 });
 
