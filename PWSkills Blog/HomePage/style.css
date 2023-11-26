@@ -1,13 +1,13 @@
 body{
     background-color:#000000;
     color: #e2d2d2;
-    padding: 0 10px;
     margin: 0;
 }
 
 .container{
     display: flex;
     flex-direction: column;
+    margin: 0 20px;
 }
 
 .intro{
@@ -21,7 +21,8 @@ body{
     color: white;
     border: none;
     background-color:black;
-    font-size:xx-large;
+    font-size:40px;
+    cursor: pointer;
 }
 .box{
     display: flex;
@@ -82,13 +83,14 @@ body{
     margin-top: 7px;
 }
 
-.read1{
+.read{
     width: 80px;
     height: 30px;
     background-color: pink;
     color: rgb(176, 25, 50);
     font-size:large;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 
@@ -143,18 +145,6 @@ body{
     margin-top: 7px;
 }
 
-.read2{
-    width: 80px;
-    height: 30px;
-    background-color: pink;
-    color: rgb(176, 25, 50);
-    font-size:large;
-    border-radius: 5px;
-}
-
-
-
-
 
 .box3{
     width: 250px;
@@ -203,13 +193,4 @@ body{
     font-size:large;
     margin-left: 4px;
     margin-top: 7px;
-}
-
-.read3{
-    width: 80px;
-    height: 30px;
-    background-color: pink;
-    color: rgb(176, 25, 50);
-    font-size:large;
-    border-radius: 5px;
 }
