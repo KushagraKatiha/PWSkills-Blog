@@ -1,13 +1,12 @@
 const blogModel = document.querySelector('.form-cover');
 const addBlogBtn = document.querySelector('.blog-add');
 const backBtn = document.querySelector('.back-arrow');
-const readBtnArr = document.querySelectorAll('.rd-btn');
 
-readBtnArr.forEach(element => {
-    element.addEventListener('click', () => {
-        window.location.href = '../BlogPage/blog.html'
-    });
-});
+// readBtnArr.forEach(element => {
+//     element.addEventListener('click', () => {
+//         window.location.href = '../BlogPage/blog.html'
+//     });
+// });
 
 addBlogBtn.addEventListener('click', () => {
     blogModel.style.visibility = 'visible';
@@ -93,8 +92,20 @@ delBtnArr.forEach(element => {
     });
 });
 
+// On clicking read button redirect to blog page and fetch data from url and add to blog page
 
+if(blogArrLocal && blogArrLocal.length > 0 && !blogArrLocal.includes(null)) {
 
+    const rdBtnArr = document.querySelectorAll('.rd-btn');
+    
+    rdBtnArr.forEach(function (element, index) {
+        element.addEventListener('click', () => {
+            const blogArr = JSON.parse(localStorage.getItem('blog'));
+
+            window.location.href = `../BlogPage/index.html?img=${blogArr[index].img}&title=${blogArr[index].title}&desc=${blogArr[index].desc}&content=${blogArr[index].content}`;
+        });
+    })
+}
 
 
 
