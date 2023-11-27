@@ -24,10 +24,11 @@ body{
     font-size:40px;
     cursor: pointer;
 }
+
 .blog-container{
+    gap: 50px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
     margin-top: 20px;
     padding: 50px 50px;
     box-shadow: 0px 0px 10px #ffffff;
