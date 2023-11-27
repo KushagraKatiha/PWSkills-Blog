@@ -1,5 +1,6 @@
-const backBtn = document.querySelector('.back-arrow');
+const backArrow = document.querySelector('.back-arrow');
 
-backBtn.addEventListener('click', () => {
+backArrow.addEventListener('click', () => {
     window.location.href = '../HomePage/index.html';
 });
+

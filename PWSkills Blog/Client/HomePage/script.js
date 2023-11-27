@@ -60,13 +60,11 @@ const blogContainer = document.querySelector('.blog-container');
 
 const setBlogData = () => {
 
-    if (blogArrLocal.length > 0) {
-
+    if (blogArrLocal && blogArrLocal.length > 0 && !blogArrLocal.includes(null)) {
         blogArrLocal.forEach(element => {
-
             blogContainer.innerHTML += `
             <div class="blog-card">
-                <img class="blog-image" src = ${element.img}alt=""/>
+                <img class="blog-image" src = ${element.img}/>
                 <div class="blog-title">${element.title}</div>
                 <div class="blog-desc">${element.desc}</div>
                 <button class="rd-btn">Read</button>
@@ -74,8 +72,9 @@ const setBlogData = () => {
             </div>`
 
         });
-
     } else {
+        // Delete blog array from local storage
+        localStorage.removeItem('blog');
         document.querySelector('.blog-container').innerHTML = '<h1 class="no-blog">No Blog Found !!</h1>';    
 }
 }
@@ -93,6 +92,7 @@ delBtnArr.forEach(element => {
         window.location.reload();
     });
 });
+
 
 
 
