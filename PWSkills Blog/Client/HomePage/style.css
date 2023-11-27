@@ -10,21 +10,21 @@ body{
     margin: 0 20px;
 }
 
-.intro{
+.nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 50px;
 }
 
-.plus{
+.blog-add{
     color: white;
     border: none;
     background-color:black;
     font-size:40px;
     cursor: pointer;
 }
-.box{
+.blog-container{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,7 +34,7 @@ body{
     border-radius: 10px;
 }
 
-.box1{
+.blog-card{
     width: 250px;
     height: 450px;
     border: 1px solid black;
@@ -46,11 +46,11 @@ body{
     flex-direction: column;
     border-radius: 5px;
     margin: auto;
-    padding: auto;
+    padding: 10px;
     gap: 10px;
 }
 
-.photobox1{
+.blog-image{
     width:200px ;
     height: 250px;
     border: 2px solid black;
@@ -58,142 +58,43 @@ body{
     border-radius: 10px;
 }
 
-.title1{
-    width: 200px;
-    height: 30px;
-
+.blog-title{
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
     border: 1px solid white;
 }
 
-.description1{
-    width: 200px;
-    height: 40px;
+.blog-desc{
+    width: fit-content;
+    height: fit-content;
+    padding: 8px;
     border: 1px solid white;
 }
 
-.writetitle1{
-    font-size:large;
-    margin-left: 4px;
-    margin-top: 4px;
-}
-
-.writedes1{
-    font-size:large;
-    margin-left: 4px;
-    margin-top: 7px;
-}
-
-.read{
+.rd-btn{
     width: 80px;
-    height: 30px;
+    height: auto;
     background-color: pink;
     color: rgb(176, 25, 50);
     font-size:large;
     border-radius: 5px;
     cursor: pointer;
+    padding: 8px;
 }
 
-
-
-
-.box2{
-    width: 250px;
-    height: 450px;
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    background-color: #221f1f;
-    box-shadow: 0px 0px 15px white;
-    flex-direction: column;
+.del-btn{
+    width: 80px;
+    height: auto;
+    background-color: pink;
+    color: rgb(176, 25, 50);
+    font-size:large;
     border-radius: 5px;
-    margin: auto;
-    padding: auto;
-    gap: 10px;
-}
-
-.photobox2{
-    width:200px ;
-    height: 250px;
-    border: 2px solid black;
-    background-color: black;
-    border-radius: 10px;
-}
-
-.title2{
-    width: 200px;
-    height: 30px;
-    border: 1px solid white;
-}
-
-.description2{
-    width: 200px;
-    height: 40px;
-    border: 1px solid white;
-}
-
-.writetitle2{
-    font-size:large;
-    margin-left: 4px;
-    margin-top: 4px;
-}
-
-.writedes2{
-    font-size:large;
-    margin-left: 4px;
-    margin-top: 7px;
+    cursor: pointer;
+    padding: 8px;
 }
 
 
-.box3{
-    width: 250px;
-    height: 450px;
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    
-    background-color: #221f1f;
-    box-shadow: 0px 0px 15px white;
-    border-radius: 5px;
-    margin: auto;
-    padding: auto;
-    gap: 10px;
-}
-
-.photobox3{
-    width:200px ;
-    height: 250px;
-    border: 2px solid black;
-    background-color: black;
-    border-radius: 10px;
-}
-
-.title3{
-    width: 200px;
-    height: 30px;
-    border: 1px solid white;
-}
-
-.description3{
-    width: 200px;
-    height: 40px;
-    border: 1px solid white;
-}
-
-.writetitle3{
-    font-size:large;
-    margin-left: 4px;
-    margin-top: 4px;
-}
-
-.writedes3{
-    font-size:large;
-    margin-left: 4px;
-    margin-top: 7px;
-}
 
 /* Blog Model Styles */
 
@@ -243,5 +144,15 @@ textarea{
     position: relative;
     font-size: 30px;
     color: white;
+    cursor: pointer;
+}
+
+.blog-form-submit{
+    width: 100%;
+    height: 50px;
+    background-color: pink;
+    color: rgb(176, 25, 50);
+    font-size:large;
+    border-radius: 5px;
     cursor: pointer;
 }
