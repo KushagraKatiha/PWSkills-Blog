@@ -2,12 +2,6 @@ const blogModel = document.querySelector('.form-cover');
 const addBlogBtn = document.querySelector('.blog-add');
 const backBtn = document.querySelector('.back-arrow');
 
-// readBtnArr.forEach(element => {
-//     element.addEventListener('click', () => {
-//         window.location.href = '../BlogPage/blog.html'
-//     });
-// });
-
 addBlogBtn.addEventListener('click', () => {
     blogModel.style.visibility = 'visible';
 })
