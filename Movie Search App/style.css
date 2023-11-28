@@ -1,0 +1,84 @@
+body{
+    background-color: #040425;
+}
+
+.head>h1{
+    color: #fff;
+    font-size: 3rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.searchBar{
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.searchBar>input{
+    width: 50%;
+    height: 2rem;
+    border: none;
+    border-radius: 5px;
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    outline: none;
+}
+
+.searchBar>button{
+    width: 10%;
+    height: 2rem;
+    border: none;
+    border-radius: 5px;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.searchBar>button:hover{
+    background-color: #27275a;
+    color: #fff;
+}
+
+.movies{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.movieCard{
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #27275a;
+    border-radius: 20px;
+}
+
+.movieCard>img{
+    width: 100%;
+    height: 18rem;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.movieCard>.movieTitle{
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.movieCard>button{
+    width: 100%;
+    height: 2rem;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.movieCard>button:hover{
+    background-color: #040425;
+    color: #fff;
+}
