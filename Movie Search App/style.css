@@ -42,9 +42,13 @@ body{
 
 .movies{
     display: flex;
+    gap: 2rem;
     flex-wrap: wrap;
     justify-content: center;
     padding: 2rem;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 600;
 }
 
 .movieCard{
@@ -53,6 +57,7 @@ body{
     flex-direction: column;
     background-color: #27275a;
     border-radius: 20px;
+    text-align: center;
 }
 
 .movieCard>img{
@@ -68,7 +73,7 @@ body{
     text-align: center;
 }
 
-.movieCard>button{
+.cardBtn{
     width: 100%;
     height: 2rem;
     border: none;
@@ -78,7 +83,7 @@ body{
     cursor: pointer;
 }
 
-.movieCard>button:hover{
+.cardBtn:hover{
     background-color: #040425;
     color: #fff;
 }
