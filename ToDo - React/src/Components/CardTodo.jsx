@@ -2,7 +2,10 @@ import React from 'react'
 
 function CardTodo() {
   return (
-    <div>CardTodo</div>
+    // CardTodo component
+    <div className='text-center bg-black h-[30%] w-20 m-auto mt-32'>
+        Hello
+    </div>
   )
 }
 
