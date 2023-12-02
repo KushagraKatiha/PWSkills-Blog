@@ -1,31 +1,46 @@
-import { useCallback, useState } from "react"
-import AddTodo from "./Components/AddTodo"
-import CardTodo from "./Components/CardTodo"
+import React from 'react'
+
+// Making todo app from react
 
 function App() {
+  const [todoHeading, setTodoHeading] = React.useState('')
+  const [todoStatus, setTodoStatus] = React.useState('pending')
   
-  const [todoHeading, setTodoHeading] = useState('')
-  const [todoStatus, setTodoStatus] = useState('pending')
+  // Define a array to store todo list
+  const todoList = []
 
-  let todos = []
+  // Define a function to add todo
+  const addTodo = () => {
+    
+  }
 
-  // function to set ToDo into to todos array
 
-  const showTodo = useCallback((e)=>{
-    console.log(e.target.value);
-    setTodoHeading(e.target.value)
-    todos.push(<CardTodo todo_heading={todoHeading} todo_status={todoStatus}/>)
-    console.log(todos);
-  })
 
   return (
-        // Making a todo app using tailwindcss
-        <div className='bg-gray-700 h-screen pt-7'>
-            <div className='text-center'>
-                <AddTodo onClick={showTodo} />
-            </div>
-        </div>     
+    <div className='h-screen w-screen bg-slate-800'>
+
+    </div>
   )
 }
 
-export {App, showTodo}
+export default App
+
+
+{/* <div className='text-center'>
+                      <input className='w-[30%] h-16 rounded pl-3 outline-none' placeholder='Set You ToDo' type="text" onChange={(e)=>(e.target.value)}/>
+                      <button className='bg-blue-700 text-white absolute px-9 mt-2 right-[33rem] py-3 rounded' onClick={()=>{
+                        showTodoList()
+                        showTodo()
+                      }}>Add</button>
+                  </div> */}
+
+
+        //           <div className='text-left p-4 rounded text-white bg-black h-80 w-56 m-auto mt-32'>
+        //   <h2 className='mb-10'>${todoHeading}</h2>
+        //   <h2 className='mb-10'>Status: ${todoStatus}</h2>
+        //   <button className='bg-purple-600 block rounded w-full py-2 mb-4 mt-20' onClick = ${()=>{
+        //     handleStatus()
+        //   }
+        //   }}>Update Status</button>
+        //   <button className='bg-purple-600 block rounded w-full py-2 mb-4 '>Remove</button>
+        // </div>
