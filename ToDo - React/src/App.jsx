@@ -1,46 +1,37 @@
 import React from 'react'
 
 // Making todo app from react
-
 function App() {
   const [todoHeading, setTodoHeading] = React.useState('')
   const [todoStatus, setTodoStatus] = React.useState('pending')
   
-  // Define a array to store todo list
-  const todoList = []
+  // Defining the Todo array which will contain todo Headings
+  let Todo = []
 
-  // Define a function to add todo
-  const addTodo = () => {
-    
+  // Defining a function to push Todo heading from input component to Todo array 
+  function addTodo(){
+    let todoHeading = document.querySelector("#todoInput").value
+    Todo.push(todoHeading)
   }
 
-
-
   return (
-    <div className='h-screen w-screen bg-slate-800'>
+    <>
+      {/* Component to add TodoHeading into the todo arrays */}
+      <div className='bg-slate-900 pt-10 h-screen px-10'>
+        {/* Input box */}
+        <div className='m-auto px-12 py-8 bg-blue-800 rounded-md w-fit'>
+          <input type="text" placeholder='Enter your todo' className='pr-36 bg-gray-950 border-none outline-none px-5 h-20 py-1 rounded-md text-xl text-gray-500 font-semibold'/>
+          <button className='px-5 py-2 font-bold absolute right-[32rem] top-[5.7rem] text-gray-200 bg-blue-600 rounded-md'>Add ToDo</button>
+        </div>
 
-    </div>
+        {/* Todo Card Component */}
+        <div id='todoContainer' className= {`px-10 py-8 rounded-md border-black border-4 bg-slate-600 h-auto w-fit mt-20 ${Todo.length? 'visible': 'hidden'}`} >
+          {/* Todo card will come from another funciton */}
+        </div>
+      </div>
+    </>
   )
-}
+  }
 
 export default App
 
-
-{/* <div className='text-center'>
-                      <input className='w-[30%] h-16 rounded pl-3 outline-none' placeholder='Set You ToDo' type="text" onChange={(e)=>(e.target.value)}/>
-                      <button className='bg-blue-700 text-white absolute px-9 mt-2 right-[33rem] py-3 rounded' onClick={()=>{
-                        showTodoList()
-                        showTodo()
-                      }}>Add</button>
-                  </div> */}
-
-
-        //           <div className='text-left p-4 rounded text-white bg-black h-80 w-56 m-auto mt-32'>
-        //   <h2 className='mb-10'>${todoHeading}</h2>
-        //   <h2 className='mb-10'>Status: ${todoStatus}</h2>
-        //   <button className='bg-purple-600 block rounded w-full py-2 mb-4 mt-20' onClick = ${()=>{
-        //     handleStatus()
-        //   }
-        //   }}>Update Status</button>
-        //   <button className='bg-purple-600 block rounded w-full py-2 mb-4 '>Remove</button>
-        // </div>
