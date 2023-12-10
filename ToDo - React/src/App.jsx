@@ -2,9 +2,8 @@ import React from 'react'
 
 // Making todo app from react
 function App() {
-  const [todoHeading, setTodoHeading] = React.useState('')
   const [todoStatus, setTodoStatus] = React.useState('pending')
-  
+
   // Defining the Todo array which will contain todo Headings
   let Todos = []
 
@@ -15,19 +14,34 @@ function App() {
     Todos.push(
       todoHeading
     )
+    document.getElementById('todoInput').value = ''
     console.log(Todos);
   }
 
-  function showTodos(){
-    Todos.map((todo, key)=>{
-      console.log(todo);
-      document.getElementById('todoContainer').innerHTML += `<div className="bg-red-700 p-10 rounded-lg border-4 border-white">
-      <h1>${todo}</h1>
-    </div>`
-    })
+  
+  function showTodos() {
+    const todoContainer = document.getElementById('todoContainer');
+  
+    // Clear existing content
+    todoContainer.innerHTML = '';
+  
+    // Check if there are todos
+    if (Todos.length > 0) {
+       todoContainer.style.display = 'flex';  
+      // If there are todos, display them
+      Todos.reverse().forEach((todo, key) => {
+        todoContainer.innerHTML += `
+          <div id=${key} class='flex flex-col gap-5 bg-slate-800 px-10 py-8 rounded-md border-black border-4 h-auto w-fit'>
+            <h1 class="text-gray-200 text-2xl font-semibold">Todo: ${todo}</h1>
+            <h2 class="text-gray-200 text-xl font-semibold">Status: ${todoStatus}</h2>
+            <button class="bg-green-500 px-3 py-1 rounded-md text-gray-200 font-semibold">Done</button>
+            <button class="bg-red-500 px-3 py-1 rounded-md text-gray-200 font-semibold">Delete</button>
+          </div>`;
+      });
+    }
   }
   
-
+  
   return (
     <>
       {/* Component to add TodoHeading into the todo arrays */}
@@ -39,7 +53,7 @@ function App() {
         </div>
 
         {/* Todo Card Component */}
-        <div id='todoContainer' className= {`px-10 py-8 rounded-md border-black border-4 bg-slate-600 h-auto w-fit mt-20 `} >
+        <div id='todoContainer' className= {`hidden gap-8 px-10 py-8 rounded-md border-black border-4 bg-slate-600 h-auto w-fit mt-20`} >
           {/* Todo card will come from another funciton */}
         </div>  
       </div>
