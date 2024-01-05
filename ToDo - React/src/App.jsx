@@ -11,7 +11,7 @@ function App() {
   function addTodo(){
     let todoHeading = document.getElementById('todoInput').value
     if (todoHeading === '' || null) return 
-    Todos.push(
+    Todos.unshift(
       todoHeading
     )
     document.getElementById('todoInput').value = ''
@@ -29,19 +29,19 @@ function App() {
     if (Todos.length > 0) {
        todoContainer.style.display = 'flex';  
       // If there are todos, display them
-      Todos.reverse().forEach((todo, key) => {
+      Todos.forEach((todo, key) => {
         todoContainer.innerHTML += `
           <div id=${key} class='flex flex-col gap-5 bg-slate-800 px-10 py-8 rounded-md border-black border-4 h-auto w-fit'>
             <h1 class="text-gray-200 text-2xl font-semibold">Todo: ${todo}</h1>
             <h2 class="text-gray-200 text-xl font-semibold">Status: ${todoStatus}</h2>
             <button class="bg-green-500 px-3 py-1 rounded-md text-gray-200 font-semibold">Done</button>
-            <button class="bg-red-500 px-3 py-1 rounded-md text-gray-200 font-semibold">Delete</button>
+            <button class="bg-red-500 px-3 py-1 rounded-md text-gray-200 font-semibold del-btn">Delete</button>
           </div>`;
       });
     }
   }
-  
-  
+
+
   return (
     <>
       {/* Component to add TodoHeading into the todo arrays */}
